@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Masonry Галерея</title>
+  <style>
+    .masonry-gallery {
+      column-count: 3;
+      column-gap: 15px;
+      padding: 15px;
+    }
+
+    .masonry-item {
+      break-inside: avoid;
+      margin-bottom: 15px;
+    }
+
+    .masonry-image {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease;
+    }
+
+    .masonry-image:hover {
+      transform: scale(1.02);
+    }
+
+    /* Адаптивность */
+    @media (max-width: 1200px) {
+      .masonry-gallery {
+        column-count: 3;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .masonry-gallery {
+        column-count: 2;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .masonry-gallery {
+        column-count: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="masonry-gallery">
+    <div class="masonry-item">
+      <img src="image1.jpg" alt="Изображение 1" class="masonry-image">
+    </div>
+    <div class="masonry-item">
+      <img src="image2.jpg" alt="Изображение 2" class="masonry-image">
+    </div>
+    <!-- Добавьте больше изображений -->
+  </div>
+</body>
+
+</html>
